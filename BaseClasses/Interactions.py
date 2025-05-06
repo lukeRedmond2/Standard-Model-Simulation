@@ -9,17 +9,6 @@ class BaseInteraction():
     # Method to handle collisions
     def Apply(self, particles):
 
-        # # Function for finding annihilation pairs
-        # def IsPair(p1, p2):
-
-        #     # Return logic
-        #     return (
-
-        #         # Electron-positron pair
-        #         (type(p1) == Electron and type(p2) == Positron) or
-        #         (type(p1) == Positron and type(p2) == Electron)
-        #     )
-
         # Storage variables
         to_add = []
         to_remove = set()

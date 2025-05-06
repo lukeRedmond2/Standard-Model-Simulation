@@ -117,4 +117,4 @@ simulation_6 = Simulation(width, height, simulation_6_particles, simulation_6_ac
 
 
 # Choose a simulation to run
-simulation_4.Run()
+simulation_3.Run()

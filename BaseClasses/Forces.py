@@ -118,8 +118,8 @@ class WeakForce(Force):
                 particles.remove(particle)
 
                 # Adding the decay products
-                particles.append(Proton(x, y))
-                particles.append(Electron(x, y))
+                particles.append(Proton(x+10, y+10))
+                particles.append(Electron(x+10, y))
                 particles.append(ElectronAntiNeutrino(x, y))
 
     # Applying the force
@@ -141,8 +141,8 @@ class WeakForce(Force):
             # Removing neutron and adding products
             particles.remove(particle)
             particles.extend([
-                Proton(x, y),
-                Electron(x, y),
+                Proton(x+10, y+10),
+                Electron(x+10, y),
                 ElectronAntiNeutrino(x, y)
             ])
 
@@ -155,8 +155,8 @@ class WeakForce(Force):
             # Removing proton and adding products
             particles.remove(particle)
             particles.extend([
-                Neutron(x, y),
-                Positron(x, y),
+                Neutron(x+10, y+10),
+                Positron(x+10, y),
                 ElectronNeutrino(x, y)
             ])
         
@@ -169,8 +169,8 @@ class WeakForce(Force):
             # Removing proton and adding products
             particles.remove(particle)
             particles.extend([
-                Electron(x, y),
-                ElectronAntiNeutrino(x, y),
+                Electron(x+10, y+10),
+                ElectronAntiNeutrino(x+10, y),
                 MuonNeutrino(x, y)
             ])
             
@@ -183,8 +183,8 @@ class WeakForce(Force):
             # Removing proton and adding products
             particles.remove(particle)
             particles.extend([
-                Positron(x, y),
-                ElectronNeutrino(x, y),
+                Positron(x+10, y+10),
+                ElectronNeutrino(x+10, y),
                 MuonAntiNeutrino(x, y)
             ])
 
@@ -197,8 +197,8 @@ class WeakForce(Force):
             # Removing proton and adding products
             particles.remove(particle)
             particles.extend([
-                Muon(x, y),
-                TauNeutrino(x, y),
+                Muon(x+10, y+10),
+                TauNeutrino(x+10, y),
                 MuonAntiNeutrino(x, y)
             ])
             
@@ -211,7 +211,7 @@ class WeakForce(Force):
             # Removing proton and adding products
             particles.remove(particle)
             particles.extend([
-                AntiMuon(x, y),
-                TauAntiNeutrino(x, y),
+                AntiMuon(x+10, y+10),
+                TauAntiNeutrino(x+10, y),
                 MuonNeutrino(x, y)
             ])

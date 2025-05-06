@@ -2,7 +2,11 @@
 from BaseClasses.Interactions import BaseInteraction, HiggsInteraction, BaryonInteraction
 from BaseClasses.Particle import *
 from BaseClasses.Forces import Electromagnetic
+import math
 import pygame
+
+# Global speed limit
+SPEED = 2.5
 
 # Simualtion class
 class Simulation():
@@ -80,7 +84,15 @@ class Simulation():
                         print("Applying Higgs Exception:")
                         print(e)
 
-                # Movement and boundary collisions
+                # Calculating checking speed limit
+                speed = math.hypot(particle.vx, particle.vy)
+                if speed > SPEED:
+
+                    # Gradually slowing the particle down
+                    particle.vx *= 0.975
+                    particle.vy *= 0.975
+                    
+                # Updating movement and accounting for wall collisions
                 particle.x += particle.vx
                 particle.y += particle.vy
                 if particle.x < 0 or particle.x > self.width:
