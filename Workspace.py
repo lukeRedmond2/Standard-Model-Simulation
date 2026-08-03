@@ -8,8 +8,8 @@ import random
 import math
 
 # Screen dimensions
-width = 500
-height = 300
+width = 700
+height = 500
 
 # Simulation 1: 
 # 
@@ -117,4 +117,4 @@ simulation_6 = Simulation(width, height, simulation_6_particles, simulation_6_ac
 
 
 # Choose a simulation to run
-simulation_3.Run()
+simulation_4.Run()
